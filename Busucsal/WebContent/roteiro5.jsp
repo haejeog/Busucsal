@@ -10,7 +10,7 @@
 <body>
 <h1>Horários</h1>
 	<c:forEach var="lista5" items="${lista5}">
-	${lista5} <br>
+	${lista5.horario} <br>
 	</c:forEach>
 <br>
 <form> 

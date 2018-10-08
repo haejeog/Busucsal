@@ -10,7 +10,7 @@
 <body>
 <h1>Horários</h1>
 	<c:forEach var="lista3" items="${lista3}">
-	${lista3} <br>
+	${lista3.horario} <br>
 	</c:forEach>
 <form> 
 <input type="button" value="Voltar" onClick="history.go(-1)"> 
