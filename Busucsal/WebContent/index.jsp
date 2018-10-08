@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+
 <title>insert title here</title>
 </head>
 <body>
