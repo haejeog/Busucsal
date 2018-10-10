@@ -24,11 +24,6 @@ import br.ucsal.model.Usuario;
  */
 @WebServlet("/Autenticador")
 public class Autenticador extends HttpServlet {
-	List<String> lista1 = new ArrayList<>();
-	List<String> lista2 = new ArrayList<>();
-	List<String> lista3 = new ArrayList<>();
-	List<String> lista4 = new ArrayList<>();
-	List<String> lista5 = new ArrayList<>();
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -83,7 +78,9 @@ public class Autenticador extends HttpServlet {
 		String senha = request.getParameter("senha");
 		Usuario user = new Usuario(login, senha);
 		if (autenticar(user)) {
-
+			request.setAttribute("user", user);
+			RequestDispatcher rd = request.getRequestDispatcher("teste.jsp");
+			rd.forward(request, response);
 		} else {
 			request.setAttribute("erro", "usuario e senha invalidos!");
 			RequestDispatcher d = request.getRequestDispatcher("login.jsp");
